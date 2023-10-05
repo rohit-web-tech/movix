@@ -9,6 +9,7 @@ import PageNotFound from "./pages/404/PageNotFound"
 import Search from "./pages/search/Search"
 import Explore from "./pages/explore/Explore"
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/header/Header'
 
 function App() {
 
@@ -30,7 +31,9 @@ function App() {
     dispatch(getApiConfiguration(url))
   }
   return (
+    <>
     <BrowserRouter>
+    <Header/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/:mediaType/:id" element={<Details/>}/>
@@ -39,6 +42,7 @@ function App() {
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     </BrowserRouter>
+    </>
   )
 }
 

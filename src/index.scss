@@ -27,6 +27,13 @@
 
 body {
   background-color: var(--black);
+  width : 100% ;
+  position : relative ;
+}
+
+#root{
+  width : 100% ;
+  position : relative ;
 }
 
 ::-webkit-scrollbar {
