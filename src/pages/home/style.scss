@@ -1,80 +1,15 @@
-@import "../../../mixins.scss";
-
-#hero-banner {
-    width: 100vw;
-    height: 500px;
+.carouselSelection{
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: --var(--black);
-    .hero-banner-backdrop {
-        width: 100vw;
-        height: 100%;
-        position: relative;
-
-        Img {
-            width: 100vw;
-            height: 500px;
-            opacity: .3;
-        }
-    }
-
-    .hero-banner-shading {
-        position: absolute;
-        bottom: 0;
-        z-index:70;
-        height : 100px ;
-        width : 100vw ;
-         background: linear-gradient(
-            180deg,
-            rgba(4, 21, 45, 0) 0%,
-            #04152d 79.17%
-        );
-    }
-
+    margin-bottom: 70px;
     .contentWrapper {
-        position: absolute;
-        display: flex;
-        justify-content: center;
+        display:flex ;
+        justify-content: space-between;
         align-items: center;
-        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .carouselTitle {
+        font-size: 24px;
         color: white;
-        gap: 18px;
-
-        .hero-banner-title {
-            font-size: 4rem;
-            font-weight: bolder;
-        }
-
-        .hero-banner-subtitle {
-            font-size: 1.1rem;
-        }
-
-        .search-query-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            input {
-                width: 450px;
-                height: 35px;
-                border-radius: 20px 0px 0px 20px;
-                border: none;
-                outline: none;
-                padding-left : 15px ;
-                font-weight: bolder;
-            }
-
-            button {
-                width: 100px;
-                height: 35px;
-                border: none;
-                border-radius: 0px 20px 20px 0px;
-                background: var(--gradient);
-                font-weight: bolder;
-                color: white;
-            }
-        }
+        font-weight: normal;
     }
 }

@@ -1,0 +1,117 @@
+@import "../../../mixins.scss";
+
+#hero-banner {
+    width: 100%;
+    height: 450px;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include md {
+        height: 700px;
+    }
+
+    .hero-banner-backdrop{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index : 1 ; 
+        .lazy-load-image-background {
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;        
+            }
+        } 
+        .hero-banner-background {
+            height: 100%;
+            width: 100%;
+            opacity: .3;
+        }
+    }
+    
+    .hero-banner-shading {
+        position: absolute;
+        bottom: 0;
+        height: 100px;
+        width: 100vw;
+        background: linear-gradient(180deg,
+        rgba(4, 21, 45, 0) 0%,
+        #04152d 79.17%);
+        z-index : 2;
+    }
+    
+    .contentWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        gap: 18px;
+        z-index : 2;
+        
+        .hero-banner-title {
+            font-size: 3rem;
+            font-weight: bolder;
+
+            @include sm {
+                font-size: 5rem;
+            }
+        }
+
+        .hero-banner-subtitle {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        
+        .search-query-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            
+            input {
+                width: 350px;
+                height: 40px;
+                border-radius: 20px 0px 0px 20px;
+                border: none;
+                outline: none;
+                padding-left: 15px;
+                font-weight: bolder;
+                
+                @include sm {
+                    width: 600px;
+                }
+                
+                @include ssm {
+                    width: 70%;
+                }
+            }
+            
+            button {
+                width: 70px;
+                height: 40px;
+                border: none;
+                border-radius: 0px 20px 20px 0px;
+                background: var(--gradient);
+                font-weight: bolder;
+                color: white;
+                
+                @include sm {
+                    width: 130px;
+                }
+                
+                @include ssm {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}

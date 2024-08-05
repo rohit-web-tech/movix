@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import "./style.scss";
-import useFetch from '../../hooks/usefetch'
+import useFetch from '../../../hooks/usefetch'
 import { useNavigate } from 'react-router-dom';
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
-import Img from "../../components/lazyloading/Img"
+import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
+import Img from "../../../components/lazyloading/Img"
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 const HeroBanner = () => {
-  let navigate = useNavigate("");
+  let navigate = useNavigate();
   let { data, error, loading } = useFetch("/movie/upcoming");
   let [query, setQuery] = useState("");
   let [background, setBackground] = useState("");
@@ -18,15 +18,13 @@ const HeroBanner = () => {
     }
   }
   useEffect(() => {
-    console.log(data);
     const bg = url?.backdrop + data?.results[Math.floor(Math.random() * 19)]?.backdrop_path;
-    console.log(bg)
     setBackground(bg);
   }, [data])
   return (
     <div id="hero-banner">
       <div className="hero-banner-backdrop">
-        <Img src={background} />
+        <Img src={background} className="hero-banner-background"/>
       </div>
       <div className="hero-banner-shading"></div>
       <ContentWrapper>
