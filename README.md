@@ -2,7 +2,7 @@
 
 **Movix** is your go-to platform for discovering the latest movies and TV shows. Powered by the TMDB API, it offers a visually rich and intuitive user experience that makes exploring your favorite genres and finding popular titles effortless.
 
-![Movix Screenshot](https://via.placeholder.com/800x400) <!-- Add your project screenshot URL -->
+![Movix Screenshot]([https://via.placeholder.com/800x400](https://rwtportfolio.netlify.app/movix.png)) <!-- Add your project screenshot URL -->
 
 ## 🌟 Features
 
